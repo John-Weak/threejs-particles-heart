@@ -22,9 +22,70 @@
       content="https://johnweak.dev/images/haha_cat.jpg"
     />
     <meta property="twitter:creator" content="tusharbali" />
+    <style>
+      a {
+        color: rgba(255, 255, 255, 0.464);
+        text-decoration: none;
+      }
+      .ft {
+        padding: 0.2em;
+        height: 1.4em;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+       
+      }
+      @keyframes effect {
+        0% {
+          visibility: visible;
+        }
+      }
+      .hint {
+        padding: 0.2em;
+        height: 1.4em;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.216);
+        font-weight: 100;
+      }
+      .hint:hover {
+        animation: effect 0.5s;
+      }
+    </style>
     <title>❤️</title>
   </head>
   <body>
     <canvas class="webgl"></canvas>
+    <div class="hint">Hint: Drag/Zoom with Mouse or Fingers.</div>
+    <footer class="ft">
+      <a
+        href="https://github.com/John-Weak/threejs-particles-heart"
+        target="_blank"
+      >
+        Copyright©
+        <span style="color: #FE49B08C; text-decoration: underline">
+          John-Weak</span
+        >
+      </a>
+    </footer>
+    <script>
+      window.onload = function () {
+        setTimeout(hideElement, 7000);
+        const timeout = document.getRootNode();
+        console.log(timout);
+      };
+      //milliseconds until timeout//
+      function hideElement() {
+        const timeout = document.getElementById("hint-msg");
+        console.log(timout);
+        console.log("hello");
+        //timeout.style.display = "none";
+      }
+    </script>
   </body>
 </html>
